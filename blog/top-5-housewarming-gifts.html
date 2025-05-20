@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top 5 Jewish Housewarming Gifts | Jewish Gift Store Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .blog-post {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px;
+    }
+    .blog-post h1 {
+      font-size: 2em;
+      color: #2a4b7c;
+    }
+    .blog-post p {
+      line-height: 1.6;
+      margin: 1em 0;
+    }
+    .blog-post a {
+      color: #2a4b7c;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <nav id="main-nav"></nav>
+  <script>
+    fetch("../partials/nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("main-nav").innerHTML = data;
+      });
+  </script>
+
+  <main class="blog-post">
+    <h1>Top 5 Jewish Housewarming Gifts</h1>
+    <p>Helping someone settle into a new home? These gifts bring warmth, purpose, and tradition into every Jewish household — perfect for families, newlyweds, or anyone starting fresh.</p>
+
+    <h2>1. Stone Edition Tanach</h2>
+    <p>A must-have for every home. This complete Hebrew Bible features English translation and commentary — beautiful, useful, and spiritual.</p>
+    <a href="https://www.amazon.com/dp/142261039X?tag=naphtoli-20" target="_blank">View on Amazon</a>
+
+    <h2>2. ArtScroll Siddur (Ashkenaz or Sefard)</h2>
+    <p>A daily siddur is essential — give the gift of tefillah with a durable, elegant edition that feels right at home on any shelf.</p>
+    <a href="https://www.amazon.com/dp/0899066550?tag=naphtoli-20" target="_blank">View on Amazon</a>
+
+    <h2>3. Compact Tehillim</h2>
+    <p>For quiet moments, daily inspiration, or emergencies — a Tehillim is small in size but powerful in spirit. An easy and thoughtful addition to any home.</p>
+    <a href="https://www.amazon.com/dp/0899066658?tag=naphtoli-20" target="_blank">View on Amazon</a>
+
+    <h2>4. Halachah Guide for the Home</h2>
+    <p>If they’re new to observance, a book like “Laws of Daily Living” or “The Jewish Home” introduces household halachah beautifully.</p>
+    <a href="https://www.amazon.com/dp/B0026RI7Z4?tag=naphtoli-20" target="_blank">View on Amazon</a>
+
+    <h2>5. Mezuzah Scroll (With Explanation Booklet)</h2>
+    <p>One of the first mitzvos to fulfill in a new home. Add a scroll with meaning — and include a guide or translation for those still learning.</p>
+    <a href="https://www.amazon.com/dp/B00KXQ7DHK?tag=naphtoli-20" target="_blank">View on Amazon</a>
+
+    <p>These aren’t just books — they’re building blocks. Give something that brings light, learning, and legacy into their home. Mazel Tov!</p>
+  </main>
+
+  <footer id="main-footer"></footer>
+  <script>
+    fetch("../partials/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("main-footer").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
