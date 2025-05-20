@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You | The Jewish Gift Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .thank-you {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      text-align: center;
+    }
+    .thank-you h1 {
+      color: #2a4b7c;
+    }
+  </style>
+</head>
+<body>
+  <nav id="main-nav"></nav>
+  <script>
+    fetch("partials/nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("main-nav").innerHTML = data;
+      });
+  </script>
+
+  <main class="thank-you">
+    <h1>Thank You!</h1>
+    <p>Your message has been sent. We'll get back to you as soon as possible.</p>
+    <p><a href="/jewish-gift-store/">Return to Homepage</a></p>
+  </main>
+
+  <footer id="main-footer"></footer>
+  <script>
+    fetch("partials/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("main-footer").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
