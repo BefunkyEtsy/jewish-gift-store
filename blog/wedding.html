@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top 5 Jewish Wedding Gift Sets | Jewish Gift Store Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .blog-post {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px;
+    }
+    .blog-post h1 {
+      font-size: 2em;
+      color: #2a4b7c;
+    }
+    .blog-post p {
+      line-height: 1.6;
+      margin: 1em 0;
+    }
+    .blog-post a {
+      color: #2a4b7c;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <nav id="main-nav"></nav>
+  <script>
+    fetch("../partials/nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("main-nav").innerHTML = data;
+      });
+  </script>
+
+  <main class="blog-post">
+    <h1>Top 5 Jewish Wedding Gift Sets (That They'll Actually Use)</h1>
+    <p>When it comes to Jewish weddings, there’s no shortage of gifts that sparkle. But if you want your present to be both beautiful and truly useful — these book sets are the perfect blend of tradition, wisdom, and meaning.</p>
+
+    <h2>1. The Schottenstein Talmud (Berachos)</h2>
+    <p>A couple that learns together stays together. This volume is a fantastic gateway into Gemara study, even if they’ve never learned before.</p>
+    <a href="https://www.amazon.com/dp/1578190681?tag=naphtoli-20" target="_blank">View on Amazon</a>
+
+    <h2>2. Stone Edition Tanach</h2>
+    <p>The complete Hebrew Bible in one stunning volume — with English translation and commentary. A staple of every Jewish home.</p>
+    <a href="https://www.amazon.com/dp/142261039X?tag=naphtoli-20" target="_blank">View on Amazon</a>
+
+    <h2>3. ArtScroll Siddur Set (His & Hers)</h2>
+    <p>Give them matching siddurim they can use daily. Choose Ashkenaz or Sefard — it’s a heartfelt and useful gesture.</p>
+    <a href="https://www.amazon.com/dp/0899066550?tag=naphtoli-20" target="_blank">View on Amazon</a>
+
+    <h2>4. Chumash with Rashi Commentary</h2>
+    <p>The Sapirstein edition makes Torah study accessible, and looks great on the shelf. Ideal for couples who want to explore parsha together.</p>
+    <a href="https://www.amazon.com/dp/1578191149?tag=naphtoli-20" target="_blank">View on Amazon</a>
+
+    <h2>5. Compact Tehillim (Set of 2)</h2>
+    <p>Daily inspiration for him and her — in a format they can keep bedside or bring to shul. Under $20 but deeply meaningful.</p>
+    <a href="https://www.amazon.com/dp/0899066658?tag=naphtoli-20" target="_blank">View on Amazon</a>
+
+    <p>Give a gift that elevates — not just decorates. These Jewish wedding sets are practical, spiritual, and designed to last a lifetime.</p>
+  </main>
+
+  <footer id="main-footer"></footer>
+  <script>
+    fetch("../partials/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("main-footer").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
