@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jewish Gift Store Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .blog-list {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px;
+    }
+    .blog-card {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin: 20px 0;
+      padding: 20px;
+      transition: box-shadow 0.2s ease;
+    }
+    .blog-card:hover {
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+    .blog-card h2 {
+      margin-top: 0;
+      color: #2a4b7c;
+    }
+    .blog-card p {
+      color: #555;
+    }
+    .blog-card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #2a4b7c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <nav id="main-nav"></nav>
+  <script>
+    fetch("../partials/nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("main-nav").innerHTML = data;
+      });
+  </script>
+
+  <header>
+    <h1>Jewish Gift Store Blog</h1>
+    <p>Gift guides, tips, and timeless advice for meaningful Jewish giving</p>
+  </header>
+
+  <main class="blog-list">
+    <div class="blog-card">
+      <h2>Top 5 Bar Mitzvah Gifts (That He’ll Actually Use)</h2>
+      <p>Looking for a meaningful and practical gift for a Bar Mitzvah? These handpicked items are treasured by boys and appreciated by parents — from seforim to spiritual staples.</p>
+      <a href="top-5-bar-mitzvah-books.html">Read More →</a>
+    </div>
+  </main>
+
+  <footer id="main-footer"></footer>
+  <script>
+    fetch("../partials/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("main-footer").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
