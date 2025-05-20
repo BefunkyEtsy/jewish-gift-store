@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | The Jewish Gift Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .content {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+  <nav id="main-nav"></nav>
+  <script>
+    fetch("partials/nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("main-nav").innerHTML = data;
+      });
+  </script>
+
+  <header>
+    <h1>About The Jewish Gift Store</h1>
+  </header>
+
+  <main class="content">
+    <p>We created The Jewish Gift Store to make meaningful gift-giving easy. Whether you’re celebrating a Bar Mitzvah, wedding, housewarming, or simply want to build a Jewish library, our curated selection of books and essentials helps you give with purpose.</p>
+
+    <p>Every item on our site is hand-picked with care and tradition in mind. From timeless seforim to beginner-friendly editions, we focus on gifts that are used, loved, and treasured.</p>
+
+    <p>We're passionate about helping people discover beautiful, spiritual gifts that elevate any Jewish home. Thank you for supporting this project — we hope it brings joy to you and those you care about!</p>
+  </main>
+
+  <footer id="main-footer"></footer>
+  <script>
+    fetch("partials/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("main-footer").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
