@@ -1,0 +1,44 @@
+{
+  "books": [
+    {
+      "title": "Sapirstein Edition Rashi Chumash (5-Volume Set)",
+      "author": "ArtScroll",
+      "category": "Chumash",
+      "link": "https://www.amazon.com/dp/1578191149?tag=naphtoli-20",
+      "image": "images/sapirstein-chumash.jpg",
+      "featured": true
+    },
+    {
+      "title": "Schottenstein Edition Talmud Bavli (73-Volume Compact Set)",
+      "author": "ArtScroll",
+      "category": "Talmud",
+      "link": "https://www.amazon.com/dp/1578190681?tag=naphtoli-20",
+      "image": "images/schottenstein-talmud.jpg",
+      "featured": true
+    },
+    {
+      "title": "The Complete ArtScroll Siddur",
+      "author": "Nosson Scherman",
+      "category": "Siddur",
+      "link": "https://www.amazon.com/dp/0899066550?tag=naphtoli-20",
+      "image": "images/artscroll-siddur.jpg",
+      "featured": true
+    },
+    {
+      "title": "The Artscroll English Tanach: Stone Edition",
+      "author": "Nosson Scherman",
+      "category": "Tanach",
+      "link": "https://www.amazon.com/dp/142261039X?tag=naphtoli-20",
+      "image": "images/stone-edition-tanach.jpg",
+      "featured": true
+    },
+    {
+      "title": "The ArtScroll Tehillim (Psalms)",
+      "author": "ArtScroll",
+      "category": "Tehillim",
+      "link": "https://www.amazon.com/dp/0899066658?tag=naphtoli-20",
+      "image": "images/artscroll-tehillim.jpg",
+      "featured": true
+    }
+  ]
+}
