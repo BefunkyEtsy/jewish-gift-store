@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jewish Gift Ideas | The Jewish Gift Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav id="main-nav"></nav>
+  <script>
+    fetch("partials/nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("main-nav").innerHTML = data;
+      });
+  </script>
+
+  <header>
+    <h1>Jewish Gift Ideas</h1>
+    <p>Find the perfect books for Bar Mitzvahs, weddings, and every Jewish milestone</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Bar Mitzvah Gifts</h2>
+      <div class="category-row" id="bar-mitzvah-books"></div>
+    </section>
+
+    <section>
+      <h2>Wedding & Chosson Gifts</h2>
+      <div class="category-row" id="wedding-books"></div>
+    </section>
+
+    <section>
+      <h2>New Home / Housewarming</h2>
+      <div class="category-row" id="home-books"></div>
+    </section>
+
+    <section>
+      <h2>Build a Jewish Library</h2>
+      <div class="category-row" id="library-books"></div>
+    </section>
+  </main>
+
+  <footer id="main-footer"></footer>
+  <script>
+    fetch("partials/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("main-footer").innerHTML = data;
+      });
+  </script>
+
+  <script>
+    fetch('books.json')
+      .then(response => response.json())
+      .then(data => {
+        const giftSections = {
+          "bar-mitzvah-books": ["Chumash", "Siddur", "Tehillim"],
+          "wedding-books": ["Talmud", "Tanach"],
+          "home-books": ["Tanach", "Siddur"],
+          "library-books": ["Chumash", "Talmud", "Tanach", "Siddur", "Tehillim"]
+        };
+
+        for (let sectionId in giftSections) {
+          const container = document.getElementById(sectionId);
+          const categories = giftSections[sectionId];
+
+          const books = data.books.filter(book =>
+            categories.includes(book.category) && book.featured === true
+          ).slice(0, 4);
+
+          books.forEach(book => {
+            const item = document.createElement('div');
+            item.className = 'book';
+            item.innerHTML = `
+              <img src="${book.image}" alt="${book.title}">
+              <h3>${book.title}</h3>
+              <p>${book.author}</p>
+              <a href="${book.link}" target="_blank">
+                <i class="fa-brands fa-amazon"></i> View on Amazon
+              </a>
+            `;
+            container.appendChild(item);
+          });
+        }
+      })
+      .catch(error => {
+        console.error("Error loading books:", error);
+      });
+  </script>
+
+</body>
+</html>
