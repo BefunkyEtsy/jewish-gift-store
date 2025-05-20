@@ -7,6 +7,40 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .gift-banner {
+      background: url('images/gift-banner.jpg') center/cover no-repeat;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .gift-banner h1 {
+      font-size: 2.8em;
+      margin: 0;
+    }
+    .gift-banner p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+    .gift-buttons {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .gift-buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      background-color: #2a4b7c;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.2s ease-in-out;
+    }
+    .gift-buttons a:hover {
+      background-color: #1b355a;
+    }
+  </style>
 </head>
 <body>
 
@@ -19,28 +53,35 @@
       });
   </script>
 
-  <header>
+  <div class="gift-banner">
     <h1>Jewish Gift Ideas</h1>
-    <p>Find the perfect books for Bar Mitzvahs, weddings, and every Jewish milestone</p>
-  </header>
+    <p>Thoughtful Jewish gifts for every milestone in life</p>
+  </div>
+
+  <div class="gift-buttons">
+    <a href="#bar-mitzvah">Bar Mitzvah Gifts</a>
+    <a href="#wedding">Wedding Gifts</a>
+    <a href="#housewarming">New Home</a>
+    <a href="#library">Jewish Library</a>
+  </div>
 
   <main>
-    <section>
+    <section id="bar-mitzvah">
       <h2>Bar Mitzvah Gifts</h2>
       <div class="category-row" id="bar-mitzvah-books"></div>
     </section>
 
-    <section>
+    <section id="wedding">
       <h2>Wedding & Chosson Gifts</h2>
       <div class="category-row" id="wedding-books"></div>
     </section>
 
-    <section>
+    <section id="housewarming">
       <h2>New Home / Housewarming</h2>
       <div class="category-row" id="home-books"></div>
     </section>
 
-    <section>
+    <section id="library">
       <h2>Build a Jewish Library</h2>
       <div class="category-row" id="library-books"></div>
     </section>
