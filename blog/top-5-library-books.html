@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top 5 Books for a Jewish Library | Jewish Gift Store Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .blog-post {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px;
+    }
+    .blog-post h1 {
+      font-size: 2em;
+      color: #2a4b7c;
+    }
+    .blog-post p {
+      line-height: 1.6;
+      margin: 1em 0;
+    }
+    .blog-post a {
+      color: #2a4b7c;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <nav id="main-nav"></nav>
+  <script>
+    fetch("../partials/nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("main-nav").innerHTML = data;
+      });
+  </script>
+
+  <main class="blog-post">
+    <h1>Top 5 Books for a Jewish Library</h1>
+    <p>Whether you’re building your own library or gifting someone who’s starting their Jewish journey, these seforim are the essential building blocks of a meaningful home. They combine Torah, prayer, history, and practical halachah in one spiritual foundation.</p>
+
+    <h2>1. Sapirstein Rashi Chumash Set</h2>
+    <p>The 5-volume Chumash with Rashi and translation is a cornerstone of Torah study. Accessible and insightful — no library is complete without it.</p>
+    <a href="https://www.amazon.com/dp/1578191149?tag=naphtoli-20" target="_blank">View on Amazon</a>
+
+    <h2>2. Stone Edition Tanach</h2>
+    <p>This all-in-one Hebrew Bible is the most elegant and readable edition for English-speaking learners. A must-have for reference and study.</p>
+    <a href="https://www.amazon.com/dp/142261039X?tag=naphtoli-20" target="_blank">View on Amazon</a>
+
+    <h2>3. ArtScroll Siddur (Ashkenaz/Sefard)</h2>
+    <p>A daily prayer companion with clear typesetting, explanations, and timeless commentary. For shacharis at home or shul — it belongs on your shelf.</p>
+    <a href="https://www.amazon.com/dp/0899066550?tag=naphtoli-20" target="_blank">View on Amazon</a>
+
+    <h2>4. Compact Tehillim</h2>
+    <p>For emotional strength and spiritual connection, a Tehillim is part of every Jewish bookshelf — and heart.</p>
+    <a href="https://www.amazon.com/dp/0899066658?tag=naphtoli-20" target="_blank">View on Amazon</a>
+
+    <h2>5. Beginner's Talmud (Schottenstein Edition Berachos)</h2>
+    <p>When you’re ready to go deeper, this is the volume that opens doors. Accessible, beautifully translated, and ideal for beginners and returnees alike.</p>
+    <a href="https://www.amazon.com/dp/1578190681?tag=naphtoli-20" target="_blank">View on Amazon</a>
+
+    <p>With these five books, you’ll have a full foundation of Torah, tefillah, learning, and connection. Whether for your home or someone else’s — they’re books that shape Jewish life.</p>
+  </main>
+
+  <footer id="main-footer"></footer>
+  <script>
+    fetch("../partials/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("main-footer").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
