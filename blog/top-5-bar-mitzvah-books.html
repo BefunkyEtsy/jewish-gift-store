@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top 5 Bar Mitzvah Gifts | Jewish Gift Store Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .blog-post {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px;
+    }
+    .blog-post h1 {
+      font-size: 2em;
+      color: #2a4b7c;
+    }
+    .blog-post p {
+      line-height: 1.6;
+      margin: 1em 0;
+    }
+    .blog-post a {
+      color: #2a4b7c;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <nav id="main-nav"></nav>
+  <script>
+    fetch("../partials/nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("main-nav").innerHTML = data;
+      });
+  </script>
+
+  <main class="blog-post">
+    <h1>Top 5 Bar Mitzvah Gifts (That He’ll Actually Use)</h1>
+    <p>A Bar Mitzvah is more than a milestone — it’s a turning point in a young Jewish man’s spiritual life. If you’re looking for a gift that’s meaningful, long-lasting, and genuinely useful, here are 5 excellent choices that are perfect for this sacred moment.</p>
+
+    <h2>1. Sapirstein Rashi Chumash Set</h2>
+    <p>This beautifully translated 5-volume Chumash helps boys understand the weekly parsha with Rashi’s commentary. A gift they’ll use in school and shul.</p>
+    <a href="https://www.amazon.com/dp/1578191149?tag=naphtoli-20" target="_blank">View on Amazon</a>
+
+    <h2>2. ArtScroll Siddur (Ashkenaz)</h2>
+    <p>A Bar Mitzvah boy starts leading prayers — give him a siddur that lasts. The ArtScroll edition is clear, beautiful, and a lifelong tool for tefillah.</p>
+    <a href="https://www.amazon.com/dp/0899066550?tag=naphtoli-20" target="_blank">View on Amazon</a>
+
+    <h2>3. Compact Tehillim</h2>
+    <p>A portable Tehillim helps him build the habit of daily prayer. Great for his schoolbag or nightstand.</p>
+    <a href="https://www.amazon.com/dp/0899066658?tag=naphtoli-20" target="_blank">View on Amazon</a>
+
+    <h2>4. English Tanach (Stone Edition)</h2>
+    <p>Help him access the full Hebrew Bible with clear English translation and commentary. A core book for every Jewish home.</p>
+    <a href="https://www.amazon.com/dp/142261039X?tag=naphtoli-20" target="_blank">View on Amazon</a>
+
+    <h2>5. Beginner’s Talmud Volume</h2>
+    <p>If he’s ready for the next step, the Schottenstein Talmud (Berachos) in English is a beautiful introduction to learning Gemara.</p>
+    <a href="https://www.amazon.com/dp/1578190681?tag=naphtoli-20" target="_blank">View on Amazon</a>
+
+    <p>These gifts aren’t just meaningful — they’re foundational. Give him something that supports his growth, inspires his learning, and honors the moment. Mazel Tov!</p>
+  </main>
+
+  <footer id="main-footer"></footer>
+  <script>
+    fetch("../partials/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("main-footer").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
