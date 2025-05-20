@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bar Mitzvah Gifts | The Jewish Gift Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .intro {
+      max-width: 700px;
+      margin: 40px auto 20px;
+      text-align: center;
+      font-size: 1.1em;
+    }
+    .bundle-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px 0 40px;
+    }
+    .bundle-row .book {
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="main-nav"></nav>
+  <script>
+    fetch("../partials/nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("main-nav").innerHTML = data;
+      });
+  </script>
+
+  <header>
+    <h1>Bar Mitzvah Gift Guide</h1>
+    <p>Meaningful Jewish books that inspire and last a lifetime</p>
+  </header>
+
+  <div class="intro">
+    <p>Looking for the perfect Bar Mitzvah gift? These books are timeless, meaningful, and deeply appreciated by young men starting their journey into Jewish adulthood.</p>
+  </div>
+
+  <section>
+    <h2 style="text-align:center;">Bar Mitzvah Essentials Bundle</h2>
+    <div class="bundle-row" id="bar-bundle-books"></div>
+  </section>
+
+  <section>
+    <h2 style="text-align:center;">Explore More Gift Picks</h2>
+    <div class="category-row" id="bar-mitzvah-books"></div>
+  </section>
+
+  <footer id="main-footer"></footer>
+  <script>
+    fetch("../partials/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("main-footer").innerHTML = data;
+      });
+  </script>
+
+  <script>
+    fetch('../books.json')
+      .then(response => response.json())
+      .then(data => {
+        // Featured Bundle (choose top 3)
+        const bundleItems = data.books.filter(book =>
+          ["Chumash", "Siddur", "Tehillim"].includes(book.category) && book.featured === true
+        ).slice(0, 3);
+
+        const bundleContainer = document.getElementById("bar-bundle-books");
+        bundleItems.forEach(book => {
+          const item = document.createElement('div');
+          item.className = 'book';
+          item.innerHTML = `
+            <img src="../${book.image}" alt="${book.title}">
+            <h3>${book.title}</h3>
+            <p>${book.author}</p>
+            <a href="${book.link}" target="_blank">
+              <i class="fa-brands fa-amazon"></i> View on Amazon
+            </a>
+          `;
+          bundleContainer.appendChild(item);
+        });
+
+        // Full Grid of Picks
+        const giftItems = data.books.filter(book =>
+          ["Chumash", "Siddur", "Tehillim"].includes(book.category)
+        );
+
+        const gridContainer = document.getElementById("bar-mitzvah-books");
+        giftItems.forEach(book => {
+          const item = document.createElement('div');
+          item.className = 'book';
+          item.innerHTML = `
+            <img src="../${book.image}" alt="${book.title}">
+            <h3>${book.title}</h3>
+            <p>${book.author}</p>
+            <a href="${book.link}" target="_blank">
+              <i class="fa-brands fa-amazon"></i> View on Amazon
+            </a>
+          `;
+          gridContainer.appendChild(item);
+        });
+      })
+      .catch(error => {
+        console.error("Error loading books:", error);
+      });
+  </script>
+
+</body>
+</html>
