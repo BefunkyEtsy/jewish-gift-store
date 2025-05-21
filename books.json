@@ -15,7 +15,34 @@
       "link": "https://www.amazon.com/dp/1578190681?tag=naphtoli-20",
       "image": "images/schottenstein-talmud.jpg",
       "featured": true
-    },
+    },{
+    "title": "Living Emunah for Teens",
+    "author": "Rabbi David Ashear",
+    "link": "https://www.amazon.com/dp/B07Z8R4PYK?tag=naphtoli-20",
+    "image": "https://m.media-amazon.com/images/I/51b2lAKYqYL._SX331_BO1,204,203,200_.jpg",
+    "category": "Bat Mitzvah"
+  },
+  {
+    "title": "A Woman\u2019s Wisdom: A Mussar Book for Women",
+    "author": "Rabbi Shalom Arush",
+    "link": "https://www.amazon.com/dp/9659263342?tag=naphtoli-20",
+    "image": "https://m.media-amazon.com/images/I/51BofDFvP7L._SX348_BO1,204,203,200_.jpg",
+    "category": "Bat Mitzvah"
+  },
+  {
+    "title": "Princess Without a Crown",
+    "author": "Sarah Mendelsohn",
+    "link": "https://www.amazon.com/dp/B08B49QFZK?tag=naphtoli-20",
+    "image": "https://m.media-amazon.com/images/I/41Rxk4Ev9gL._SX331_BO1,204,203,200_.jpg",
+    "category": "Bat Mitzvah"
+  },
+  {
+    "title": "More Emunah for Teens",
+    "author": "Rabbi David Ashear",
+    "link": "https://www.amazon.com/dp/B09NPMZM25?tag=naphtoli-20",
+    "image": "https://m.media-amazon.com/images/I/41IMVeE8I4L._SX329_BO1,204,203,200_.jpg",
+    "category": "Bat Mitzvah"
+  }
     {
       "title": "The Complete ArtScroll Siddur",
       "author": "Nosson Scherman",
