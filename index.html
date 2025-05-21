@@ -38,46 +38,92 @@
 
   <header>
     <h1>Welcome to The Jewish Gift Store</h1>
-    <p>Meaningful Jewish books and gifts curated for every celebration</p>
+    <p>Meaningful Jewish gifts for every milestone and celebration</p>
   </header>
 
   <main>
-    <section class="category" id="Chumash">
-      <h2>Chumash</h2>
-      <div class="book-grid" id="chumash-books"></div>
-    </section>
 
-    <section class="category" id="Talmud">
-      <h2>Talmud</h2>
-      <div class="book-grid" id="talmud-books"></div>
-    </section>
-
-    <section class="category" id="Prayer Books">
-      <h2>Prayer Books</h2>
-      <div class="book-grid" id="prayer-books"></div>
-    </section>
-
-    <section class="category" id="Library">
-      <h2>Jewish Library</h2>
-      <div class="book-grid" id="library-books"></div>
-    </section>
-
-    <section class="category" id="Bar Mitzvah">
-      <h2>Bar Mitzvah</h2>
-      <div class="book-grid" id="bar-mitzvah-books"></div>
-    </section>
-
-    <section class="category" id="Bat Mitzvah">
-      <h2>Bat Mitzvah</h2>
-      <div class="book-grid" id="bat-mitzvah-books"></div>
-    </section>
-
-    <section class="category" id="New Baby">
-      <h2>New Baby</h2>
+    <section class="category" id="new-baby">
+      <h2>Birth, Brit Milah & Baby Naming</h2>
       <div class="book-grid" id="new-baby-books"></div>
     </section>
+    
+    <section class="category" id="childrens-judaica">
+      <h2>Upsherin (First Haircut at Age 3)</h2>
+      <div class="book-grid" id="childrens-judaica-books"></div>
+    </section>
+    
+    <section class="category" id="bar-mitzvah">
+      <h2>Bar/Bat Mitzvah</h2>
+      <div class="book-grid" id="bar-mitzvah-books"></div>
+    </section>
+    
+    <section class="category" id="wedding">
+      <h2>Engagements & Weddings</h2>
+      <div class="book-grid" id="wedding-books"></div>
+    </section>
+    
+    <section class="category" id="housewarming">
+      <h2>Housewarming / Chanukat Habayit</h2>
+      <div class="book-grid" id="housewarming-books"></div>
+    </section>
+    
+    <section class="category" id="graduation">
+      <h2>Graduations (Jewish or Secular)</h2>
+      <div class="book-grid" id="graduation-books"></div>
+    </section>
+    
+    <section class="category" id="conversion">
+      <h2>Conversion to Judaism</h2>
+      <div class="book-grid" id="conversion-books"></div>
+    </section>
+    
+    <section class="category" id="scholar">
+      <h2>Torah Learning Milestones</h2>
+      <div class="book-grid" id="scholar-books"></div>
+    </section>
+    
+    <section class="category" id="ceremonial">
+      <h2>Pidyon HaBen</h2>
+      <div class="book-grid" id="ceremonial-books"></div>
+    </section>
+    
+    <section class="category" id="kids-learning">
+      <h2>First Siddur / Chumash / School</h2>
+      <div class="book-grid" id="kids-learning-books"></div>
+    </section>
+    
+    <section class="category" id="holidays">
+      <h2>Holidays (Especially Hanukkah & Purim)</h2>
+      <div class="book-grid" id="holidays-books"></div>
+    </section>
+    
+    <section class="category" id="special-occasion">
+      <h2>Milestone Birthdays & Anniversaries</h2>
+      <div class="book-grid" id="special-occasion-books"></div>
+    </section>
+    
+    <section class="category" id="aliyah">
+      <h2>Aliyah (Moving to Israel)</h2>
+      <div class="book-grid" id="aliyah-books"></div>
+    </section>
+    
+    <section class="category" id="clergy">
+      <h2>Ordination & Rabbinic Titles</h2>
+      <div class="book-grid" id="clergy-books"></div>
+    </section>
+    
+    <section class="category" id="rosh-hashanah">
+      <h2>Rosh Hashanah & the New Year</h2>
+      <div class="book-grid" id="rosh-hashanah-books"></div>
+    </section>
+    
+    <section class="category" id="memorials">
+      <h2>Memorials & Yahrzeits</h2>
+      <div class="book-grid" id="memorials-books"></div>
+    </section>
+    
   </main>
-
   <footer id="main-footer"></footer>
   <script>
     fetch("partials/footer.html")
@@ -90,13 +136,23 @@
       .then(res => res.json())
       .then(data => {
         const categories = {
-          "Chumash": "chumash-books",
-          "Talmud": "talmud-books",
-          "Prayer Books": "prayer-books",
-          "Library": "library-books",
+"New Baby": "new-baby-books",
+          "Children’s Judaica": "childrens-judaica-books",
           "Bar Mitzvah": "bar-mitzvah-books",
-          "Bat Mitzvah": "bat-mitzvah-books",
-          "New Baby": "new-baby-books"
+          "Wedding": "wedding-books",
+          "Housewarming": "housewarming-books",
+          "Graduation": "graduation-books",
+          "Conversion": "conversion-books",
+          "Scholar": "scholar-books",
+          "Ceremonial": "ceremonial-books",
+          "Kids' Learning": "kids-learning-books",
+          "Holidays": "holidays-books",
+          "Special Occasion": "special-occasion-books",
+          "Aliyah": "aliyah-books",
+          "Clergy": "clergy-books",
+          "Rosh Hashanah": "rosh-hashanah-books",
+          "Memorials": "memorials-books",
+          
         };
 
         data.forEach(book => {
