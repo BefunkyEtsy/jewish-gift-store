@@ -57,9 +57,24 @@
       <div class="book-grid" id="prayer-books"></div>
     </section>
 
-    <section class="category" id="Jewish Library">
+    <section class="category" id="Library">
       <h2>Jewish Library</h2>
       <div class="book-grid" id="library-books"></div>
+    </section>
+
+    <section class="category" id="Bar Mitzvah">
+      <h2>Bar Mitzvah</h2>
+      <div class="book-grid" id="bar-mitzvah-books"></div>
+    </section>
+
+    <section class="category" id="Bat Mitzvah">
+      <h2>Bat Mitzvah</h2>
+      <div class="book-grid" id="bat-mitzvah-books"></div>
+    </section>
+
+    <section class="category" id="New Baby">
+      <h2>New Baby</h2>
+      <div class="book-grid" id="new-baby-books"></div>
     </section>
   </main>
 
@@ -75,14 +90,18 @@
       .then(res => res.json())
       .then(data => {
         const categories = {
-          "Chumash": document.getElementById("chumash-books"),
-          "Talmud": document.getElementById("talmud-books"),
-          "Prayer Books": document.getElementById("prayer-books"),
-          "Library": document.getElementById("library-books")
+          "Chumash": "chumash-books",
+          "Talmud": "talmud-books",
+          "Prayer Books": "prayer-books",
+          "Library": "library-books",
+          "Bar Mitzvah": "bar-mitzvah-books",
+          "Bat Mitzvah": "bat-mitzvah-books",
+          "New Baby": "new-baby-books"
         };
 
         data.forEach(book => {
-          const container = categories[book.category];
+          const id = categories[book.category];
+          const container = document.getElementById(id);
           if (container && container.children.length < 4) {
             const div = document.createElement("div");
             div.className = "book";
