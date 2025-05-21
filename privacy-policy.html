@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy | The Jewish Gift Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .content {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      font-size: 1.05em;
+      line-height: 1.6;
+      background: #f8f6f0;
+      border-radius: 8px;
+    }
+    h1, h2 {
+      color: #2a4b7c;
+    }
+  </style>
+</head>
+<body>
+  <nav id="main-nav"></nav>
+  <script>
+    fetch("partials/nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("main-nav").innerHTML = data;
+      });
+  </script>
+
+  <main class="content">
+    <h1>Privacy Policy</h1>
+    <p>Your privacy is important to us. This policy outlines how we collect and use your information at The Jewish Gift Store.</p>
+
+    <h2>Information We Collect</h2>
+    <p>We collect your name and email address when you subscribe to our newsletter or submit a message through our contact form.</p>
+
+    <h2>How We Use Your Information</h2>
+    <p>Your email may be used to send periodic newsletters, blog updates, or special gift recommendations. We do not sell or share your personal data with third parties.</p>
+
+    <h2>Unsubscribing</h2>
+    <p>You may unsubscribe from our email list at any time using the “unsubscribe” link found in every email we send.</p>
+
+    <h2>Third-Party Services</h2>
+    <p>We use MailerLite to manage email signups and communication. Their privacy policies apply where relevant.</p>
+
+    <h2>Contact</h2>
+    <p>If you have questions about this policy, feel free to <a href="/jewish-gift-store/contact.html">contact us</a>.</p>
+  </main>
+
+  <footer id="main-footer"></footer>
+  <script>
+    fetch("partials/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("main-footer").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
