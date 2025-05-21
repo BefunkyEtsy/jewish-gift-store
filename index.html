@@ -5,11 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The Jewish Gift Store</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <style>
+    section.category {
+      margin: 50px auto;
+      max-width: 1200px;
+      padding: 0 20px;
+    }
+    section.category h2 {
+      border-bottom: 2px solid #2a4b7c;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      color: #2a4b7c;
+    }
+    .book-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: flex-start;
+    }
+  </style>
 </head>
 <body>
-
   <nav id="main-nav"></nav>
   <script>
     fetch("partials/nav.html")
@@ -21,29 +38,28 @@
 
   <header>
     <h1>Welcome to The Jewish Gift Store</h1>
-    <p>Elegant Jewish books & meaningful gifts for Bar Mitzvahs, weddings, and more</p>
+    <p>Meaningful Jewish books and gifts curated for every celebration</p>
   </header>
 
   <main>
-    <section>
-      <h2>Bar Mitzvah Gifts</h2>
-      <div class="category-row" id="chumash-books"></div>
+    <section class="category" id="Chumash">
+      <h2>Chumash</h2>
+      <div class="book-grid" id="chumash-books"></div>
     </section>
 
-    <section>
-      <h2>Wedding & Chosson Gifts</h2>
-      <div class="category-row" id="talmud-books"></div>
+    <section class="category" id="Talmud">
+      <h2>Talmud</h2>
+      <div class="book-grid" id="talmud-books"></div>
     </section>
 
-    <section>
-      <h2>Prayer & Everyday Spirituality</h2>
-      <div class="category-row" id="siddurim-books"></div>
+    <section class="category" id="Prayer Books">
+      <h2>Prayer Books</h2>
+      <div class="book-grid" id="prayer-books"></div>
     </section>
 
-    <section>
-      <h2>Tanach & Psalms</h2>
-      <div class="category-row" id="tanach-books"></div>
-      <div class="category-row" id="tehillim-books"></div>
+    <section class="category" id="Jewish Library">
+      <h2>Jewish Library</h2>
+      <div class="book-grid" id="library-books"></div>
     </section>
   </main>
 
@@ -54,46 +70,32 @@
       .then(data => {
         document.getElementById("main-footer").innerHTML = data;
       });
-  </script>
 
-  <script>
-    fetch('books.json')
-      .then(response => response.json())
+    fetch("books.json")
+      .then(res => res.json())
       .then(data => {
         const categories = {
-          "chumash-books": "Chumash",
-          "talmud-books": "Talmud",
-          "siddurim-books": "Siddur",
-          "tanach-books": "Tanach",
-          "tehillim-books": "Tehillim"
+          "Chumash": document.getElementById("chumash-books"),
+          "Talmud": document.getElementById("talmud-books"),
+          "Prayer Books": document.getElementById("prayer-books"),
+          "Library": document.getElementById("library-books")
         };
 
-        for (let id in categories) {
-          const container = document.getElementById(id);
-          const books = data.books.filter(book =>
-            book.category.toLowerCase() === categories[id].toLowerCase() &&
-            book.featured === true
-          ).slice(0, 4);
-
-          books.forEach(book => {
-            const item = document.createElement('div');
-            item.className = 'book';
-            item.innerHTML = `
+        data.forEach(book => {
+          const container = categories[book.category];
+          if (container && container.children.length < 4) {
+            const div = document.createElement("div");
+            div.className = "book";
+            div.innerHTML = `
               <img src="${book.image}" alt="${book.title}">
               <h3>${book.title}</h3>
               <p>${book.author}</p>
-              <a href="${book.link}" target="_blank">
-                <i class="fa-brands fa-amazon"></i> View on Amazon
-              </a>
+              <a href="${book.link}" target="_blank">Buy on Amazon</a>
             `;
-            container.appendChild(item);
-          });
-        }
-      })
-      .catch(error => {
-        console.error("Error loading books:", error);
+            container.appendChild(div);
+          }
+        });
       });
   </script>
-
 </body>
 </html>
