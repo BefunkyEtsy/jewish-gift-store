@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You for Subscribing | The Jewish Gift Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .thank-you {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      text-align: center;
+      background: #f8f6f0;
+      border-radius: 8px;
+    }
+    .thank-you h1 {
+      color: #2a4b7c;
+    }
+    .thank-you a {
+      color: #2a4b7c;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav id="main-nav"></nav>
+  <script>
+    fetch("partials/nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("main-nav").innerHTML = data;
+      });
+  </script>
+
+  <main class="thank-you">
+    <h1>You're on the list!</h1>
+    <p>Thanks for subscribing to the Jewish Gift Store Newsletter.</p>
+    <p>You’ll receive thoughtful gift ideas, seforim spotlights, and special blog content straight to your inbox.</p>
+    <p>Meanwhile, <a href="/jewish-gift-store/blog/">check out our latest blog posts</a> or <a href="/jewish-gift-store/gifts.html">browse gift guides</a>.</p>
+  </main>
+
+  <footer id="main-footer"></footer>
+  <script>
+    fetch("partials/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("main-footer").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
