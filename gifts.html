@@ -1,139 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jewish Gift Ideas | The Jewish Gift Store</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Guides | The Jewish Gift Store</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/jewish-gift-store/style.css">
   <style>
-    .gift-banner {
-      background: url('images/gift-banner.jpg') center/cover no-repeat;
-      color: white;
-      padding: 60px 20px;
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+    }
+    .grid-item {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       text-align: center;
+      padding: 20px;
+      width: 260px;
+      transition: transform 0.2s;
     }
-    .gift-banner h1 {
-      font-size: 2.8em;
-      margin: 0;
+    .grid-item:hover {
+      transform: translateY(-4px);
     }
-    .gift-banner p {
-      font-size: 1.2em;
+    .grid-item h3 {
       margin-top: 10px;
+      color: #2a4b7c;
     }
-    .gift-buttons {
-      text-align: center;
-      margin: 30px 0;
-    }
-    .gift-buttons a {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 20px;
-      background-color: #2a4b7c;
-      color: white;
+    .grid-item a {
       text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background 0.2s ease-in-out;
-    }
-    .gift-buttons a:hover {
-      background-color: #1b355a;
+      color: inherit;
     }
   </style>
 </head>
 <body>
-
   <nav id="main-nav"></nav>
   <script>
-    fetch("partials/nav.html")
+    fetch("/jewish-gift-store/partials/nav.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("main-nav").innerHTML = data;
       });
   </script>
 
-  <div class="gift-banner">
-    <h1>Jewish Gift Ideas</h1>
-    <p>Thoughtful Jewish gifts for every milestone in life</p>
-  </div>
+  <header>
+    <h1>Jewish Gift Guides</h1>
+    <p style="text-align: center;">Thoughtful gifts curated for every Jewish celebration and life moment.</p>
+  </header>
 
-  <div class="gift-buttons">
-    <a href="#bar-mitzvah">Bar Mitzvah Gifts</a>
-    <a href="#wedding">Wedding Gifts</a>
-    <a href="#housewarming">New Home</a>
-    <a href="#library">Jewish Library</a>
-  </div>
-
-  <main>
-    <section id="bar-mitzvah">
-      <h2>Bar Mitzvah Gifts</h2>
-      <div class="category-row" id="bar-mitzvah-books"></div>
-    </section>
-
-    <section id="wedding">
-      <h2>Wedding & Chosson Gifts</h2>
-      <div class="category-row" id="wedding-books"></div>
-    </section>
-
-    <section id="housewarming">
-      <h2>New Home / Housewarming</h2>
-      <div class="category-row" id="home-books"></div>
-    </section>
-
-    <section id="library">
-      <h2>Build a Jewish Library</h2>
-      <div class="category-row" id="library-books"></div>
-    </section>
+  <main class="grid">
+    <div class="grid-item">
+      <a href="/jewish-gift-store/gifts/bar-mitzvah.html">
+        <img src="/jewish-gift-store/images/bar-mitzvah.jpg" alt="Bar Mitzvah" style="width:100%; border-radius: 6px;">
+        <h3>Bar Mitzvah Gifts</h3>
+      </a>
+    </div>
+    <div class="grid-item">
+      <a href="/jewish-gift-store/gifts/bat-mitzvah.html">
+        <img src="/jewish-gift-store/images/bat-mitzvah.jpg" alt="Bat Mitzvah" style="width:100%; border-radius: 6px;">
+        <h3>Bat Mitzvah Gifts</h3>
+      </a>
+    </div>
+    <div class="grid-item">
+      <a href="/jewish-gift-store/gifts/wedding.html">
+        <img src="/jewish-gift-store/images/wedding.jpg" alt="Wedding" style="width:100%; border-radius: 6px;">
+        <h3>Wedding Gifts</h3>
+      </a>
+    </div>
+    <div class="grid-item">
+      <a href="/jewish-gift-store/gifts/housewarming.html">
+        <img src="/jewish-gift-store/images/housewarming.jpg" alt="Housewarming" style="width:100%; border-radius: 6px;">
+        <h3>Housewarming Gifts</h3>
+      </a>
+    </div>
+    <div class="grid-item">
+      <a href="/jewish-gift-store/gifts/new-baby.html">
+        <img src="/jewish-gift-store/images/new-baby.jpg" alt="New Baby" style="width:100%; border-radius: 6px;">
+        <h3>New Baby Gifts</h3>
+      </a>
+    </div>
+    <div class="grid-item">
+      <a href="/jewish-gift-store/gifts/library.html">
+        <img src="/jewish-gift-store/images/library.jpg" alt="Library" style="width:100%; border-radius: 6px;">
+        <h3>Jewish Library</h3>
+      </a>
+    </div>
   </main>
 
   <footer id="main-footer"></footer>
   <script>
-    fetch("partials/footer.html")
+    fetch("/jewish-gift-store/partials/footer.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("main-footer").innerHTML = data;
       });
   </script>
-
-  <script>
-    fetch('books.json')
-      .then(response => response.json())
-      .then(data => {
-        const giftSections = {
-          "bar-mitzvah-books": ["Chumash", "Siddur", "Tehillim"],
-          "wedding-books": ["Talmud", "Tanach"],
-          "home-books": ["Tanach", "Siddur"],
-          "library-books": ["Chumash", "Talmud", "Tanach", "Siddur", "Tehillim"]
-        };
-
-        for (let sectionId in giftSections) {
-          const container = document.getElementById(sectionId);
-          const categories = giftSections[sectionId];
-
-          const books = data.books.filter(book =>
-            categories.includes(book.category) && book.featured === true
-          ).slice(0, 4);
-
-          books.forEach(book => {
-            const item = document.createElement('div');
-            item.className = 'book';
-            item.innerHTML = `
-              <img src="${book.image}" alt="${book.title}">
-              <h3>${book.title}</h3>
-              <p>${book.author}</p>
-              <a href="${book.link}" target="_blank">
-                <i class="fa-brands fa-amazon"></i> View on Amazon
-              </a>
-            `;
-            container.appendChild(item);
-          });
-        }
-      })
-      .catch(error => {
-        console.error("Error loading books:", error);
-      });
-  </script>
-
 </body>
 </html>
