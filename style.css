@@ -122,3 +122,28 @@ footer {
   font-size: 0.9rem;
   color: #777;
 }
+
+/* Section Headings Divider */
+.section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #d1c4e9;
+  margin: 0.5rem auto 1rem;
+}
+
+/* Call-to-Action Banner */
+.cta-banner {
+  margin-top: 3rem;
+  padding: 1.2rem;
+  background: #f9f7ff;
+  border-left: 5px solid #4b2e83;
+  text-align: center;
+  font-size: 1rem;
+}
+.cta-banner a {
+  color: #1a73e8;
+  font-weight: bold;
+  text-decoration: none;
+}
