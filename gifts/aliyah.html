@@ -11,24 +11,6 @@
       background: #faf9f6;
       color: #2d2d2d;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background: #fff;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #e0e0e0;
-    }
-
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #4b2e83;
-      font-weight: 500;
     }
 
     .hero {
@@ -73,15 +55,19 @@
     .gift-card {
       background: #ffffff;
       border-radius: 14px;
-      padding: 1.5rem;
+      padding: 1rem;
       border: 1px solid #ddd;
       box-shadow: 0 4px 12px rgba(0,0,0,0.06);
       transition: all 0.3s ease;
+      text-align: center;
     }
 
-    .gift-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    .gift-card img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 0.8rem;
     }
 
     .gift-card a {
@@ -89,10 +75,11 @@
       color: #1a73e8;
       font-size: 1.05rem;
       text-decoration: none;
+      display: block;
+      margin-bottom: 0.3rem;
     }
 
     .gift-card p {
-      margin-top: 0.5rem;
       font-size: 0.95rem;
       color: #444;
     }
@@ -133,16 +120,6 @@
 </head>
 <body>
 
-<header>
-  <h1 style="font-size: 1.4rem; color: #4b2e83;">Jewish Gift Store</h1>
-  <nav>
-    <a href="/jewish-gift-store/gifts/gifts-index.html">Home</a>
-    <a href="/jewish-gift-store/gifts/holidays.html">Holidays</a>
-    <a href="/jewish-gift-store/gifts/bar-mitzvah.html">Bar/Bat Mitzvah</a>
-    <a href="/jewish-gift-store/gifts/contact.html">Contact</a>
-  </nav>
-</header>
-
 <div class="hero">
   <h1>🇮🇱 Aliyah Gift Ideas</h1>
   <p>Celebrate a New Life in Israel with Meaningful and Elegant Jewish Gifts</p>
@@ -154,14 +131,17 @@
   <h2>🏠 Home Blessings & Judaica</h2>
   <div class="gift-grid">
     <div class="gift-card">
+      <img src="/jewish-gift-store/images/mezuzah-placeholder.jpg" alt="Mezuzah" />
       <a href="https://www.amazon.com/s?k=mezuzah+case+israel&tag=naphtoli-20" target="_blank">Mezuzah Cases</a>
       <p>Crafted from Jerusalem stone or artistic Israeli materials.</p>
     </div>
     <div class="gift-card">
+      <img src="/jewish-gift-store/images/birkat-placeholder.jpg" alt="Birkat Habayit" />
       <a href="https://www.amazon.com/s?k=birkat+habayit&tag=naphtoli-20" target="_blank">Birkat Habayit</a>
       <p>Decorative home blessings for peace and protection.</p>
     </div>
     <div class="gift-card">
+      <img src="/jewish-gift-store/images/candlesticks-placeholder.jpg" alt="Shabbat Candlesticks" />
       <a href="https://www.amazon.com/s?k=shabbat+candlesticks&tag=naphtoli-20" target="_blank">Shabbat Candlesticks</a>
       <p>Elegant pieces for a warm and spiritual home.</p>
     </div>
@@ -170,10 +150,12 @@
   <h2>📚 Books & Language Tools</h2>
   <div class="gift-grid">
     <div class="gift-card">
+      <img src="/jewish-gift-store/images/hebrew-books-placeholder.jpg" alt="Hebrew Language Books" />
       <a href="https://www.amazon.com/s?k=hebrew+language+learning+books&tag=naphtoli-20" target="_blank">Hebrew Language Books</a>
       <p>Perfect for both beginners and more fluent learners.</p>
     </div>
     <div class="gift-card">
+      <img src="/jewish-gift-store/images/cookbook-placeholder.jpg" alt="Israeli Cookbooks" />
       <a href="https://www.amazon.com/s?k=jerusalem+ottolenghi&tag=naphtoli-20" target="_blank">Israeli Cookbooks</a>
       <p>Bring the flavors of the homeland to their new kitchen.</p>
     </div>
@@ -182,10 +164,12 @@
   <h2>🎁 Personalized & Cultural Gifts</h2>
   <div class="gift-grid">
     <div class="gift-card">
+      <img src="/jewish-gift-store/images/name-jewelry-placeholder.jpg" alt="Hebrew Name Jewelry" />
       <a href="https://www.amazon.com/s?k=hebrew+name+jewelry&tag=naphtoli-20" target="_blank">Hebrew Name Jewelry</a>
       <p>Stylish and personal, with custom inscriptions.</p>
     </div>
     <div class="gift-card">
+      <img src="/jewish-gift-store/images/art-placeholder.jpg" alt="Israeli Art Prints" />
       <a href="https://www.amazon.com/s?k=israeli+art+prints&tag=naphtoli-20" target="_blank">Israeli Art Prints</a>
       <p>Beautiful wall décor that feels like home.</p>
     </div>
@@ -194,14 +178,17 @@
   <h2>🧳 Practical Essentials</h2>
   <div class="gift-grid">
     <div class="gift-card">
+      <img src="/jewish-gift-store/images/adapter-placeholder.jpg" alt="Travel Adapters" />
       <a href="https://www.amazon.com/s?k=israel+travel+adapter&tag=naphtoli-20" target="_blank">Travel Adapters</a>
       <p>Ensure their electronics work from day one.</p>
     </div>
     <div class="gift-card">
+      <img src="/jewish-gift-store/images/sim-placeholder.jpg" alt="SIM Cards" />
       <a href="https://www.amazon.com/s?k=israel+sim+card&tag=naphtoli-20" target="_blank">SIM Cards</a>
       <p>Stay connected from the moment they land.</p>
     </div>
     <div class="gift-card">
+      <img src="/jewish-gift-store/images/bags-placeholder.jpg" alt="Reusable Bags" />
       <a href="https://www.amazon.com/s?k=reusable+grocery+bags&tag=naphtoli-20" target="_blank">Reusable Bags</a>
       <p>Eco-friendly and stylish essentials for every day.</p>
     </div>
@@ -210,10 +197,12 @@
   <h2>🍷 Taste of Israel</h2>
   <div class="gift-grid">
     <div class="gift-card">
+      <img src="/jewish-gift-store/images/wine-placeholder.jpg" alt="Israeli Wine" />
       <a href="https://www.amazon.com/s?k=israeli+wine&tag=naphtoli-20" target="_blank">Israeli Wine</a>
       <p>Celebrate with selections from top kosher wineries.</p>
     </div>
     <div class="gift-card">
+      <img src="/jewish-gift-store/images/skincare-placeholder.jpg" alt="Dead Sea Skincare" />
       <a href="https://www.amazon.com/s?k=dead+sea+skincare+ahava&tag=naphtoli-20" target="_blank">Dead Sea Skincare</a>
       <p>Pamper them with mineral-rich skincare products.</p>
     </div>
