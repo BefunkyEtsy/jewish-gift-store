@@ -1,160 +1,49 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jewish Gift Store</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #ffffff;
-      color: #333;
-    }
-
-    header {
-      background: #f7f7f7;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #ddd;
-    }
-
-    header h1 {
-      font-size: 1.5rem;
-      color: #2e2e2e;
-    }
-
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #444;
-      font-weight: 500;
-    }
-
-    .hero {
-      background: url('/jewish-gift-store/images/hero-banner.jpg') no-repeat center center/cover;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    }
-
-    .hero h2 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-
-    .intro {
-      text-align: center;
-      padding: 2rem 1rem 1rem;
-    }
-
-    .intro h2 {
-      font-size: 1.8rem;
-      color: #333;
-    }
-
-    .container {
-      padding: 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: #fafafa;
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      padding: 1.5rem;
-      transition: all 0.25s ease-in-out;
-      text-align: center;
-      cursor: pointer;
-    }
-
-    .card:hover {
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-      transform: translateY(-5px);
-    }
-
-    .card a {
-      text-decoration: none;
-      color: #1a73e8;
-      font-weight: 600;
-      font-size: 1.1rem;
-      display: block;
-      padding: 0.5rem 0;
-    }
-
-    .card .icon {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .card .desc {
-      font-size: 0.85rem;
-      color: #666;
-      margin-top: 0.5rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #f0f0f0;
-      font-size: 0.9rem;
-      color: #777;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explore Jewish gift ideas by occasion — from birth to memorials, bar mitzvah to aliyah." />
+  <meta name="keywords" content="jewish gifts, judaica, jewish occasions, bar mitzvah, wedding, aliyah, baby gifts" />
+  <title>Jewish Gift Categories | Jewish Gift Store</title>
+  <link rel="stylesheet" href="/jewish-gift-store/style.css" />
 </head>
 <body>
-  <header>
-    <h1>Jewish Gift Store</h1>
-    <nav>
-      <a href="/jewish-gift-store/gifts/gifts-index.html">Home</a>
-      <a href="/jewish-gift-store/gifts/holidays.html">Holidays</a>
-      <a href="/jewish-gift-store/gifts/bar-mitzvah.html">Bar/Bat Mitzvah</a>
-      <a href="/jewish-gift-store/gifts/final-thoughts.html">All Gifts</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <h2>Celebrate Every Jewish Milestone with Meaningful Gifts</h2>
-  </section>
+<div class="hero">
+  <h1>✡️ Jewish Gifts by Life Occasion</h1>
+  <p>Beautiful, meaningful presents for every Jewish milestone</p>
+</div>
 
-  <section class="intro">
-    <h2>🛍 Shop by Occasion</h2>
-    <p>Find the perfect gift for every Jewish life milestone.</p>
-  </section>
+<main class="section">
+  <div class="gift-grid">
+    <div class="gift-card"><a href="/jewish-gift-store/gifts/aliyah.html">🇮🇱 Aliyah (Moving to Israel)</a></div>
+    <div class="gift-card"><a href="/jewish-gift-store/gifts/bar-mitzvah.html">🎉 Bar/Bat Mitzvah</a></div>
+    <div class="gift-card"><a href="/jewish-gift-store/gifts/baby.html">🍼 Birth, Brit Milah & Baby Naming</a></div>
+    <div class="gift-card"><a href="/jewish-gift-store/gifts/conversion.html">✡️ Conversion to Judaism</a></div>
+    <div class="gift-card"><a href="/jewish-gift-store/gifts/wedding.html">💍 Engagements & Weddings</a></div>
+    <div class="gift-card"><a href="/jewish-gift-store/gifts/graduation.html">🎓 Graduations</a></div>
+    <div class="gift-card"><a href="/jewish-gift-store/gifts/holidays.html">🕯 Jewish Holidays & Shabbat</a></div>
+    <div class="gift-card"><a href="/jewish-gift-store/gifts/housewarming.html">🏡 Housewarming / Chanukat HaBayit</a></div>
+    <div class="gift-card"><a href="/jewish-gift-store/gifts/kids-learning.html">📖 Kids’ First Siddur / School</a></div>
+    <div class="gift-card"><a href="/jewish-gift-store/gifts/memorial.html">🕯 Memorials & Yahrzeits</a></div>
+    <div class="gift-card"><a href="/jewish-gift-store/gifts/milestone.html">👵 Milestone Birthdays & Anniversaries</a></div>
+    <div class="gift-card"><a href="/jewish-gift-store/gifts/ordination.html">🏛 Rabbinic Ordination</a></div>
+    <div class="gift-card"><a href="/jewish-gift-store/gifts/pidyon.html">👶 Pidyon HaBen</a></div>
+    <div class="gift-card"><a href="/jewish-gift-store/gifts/torah-learning.html">📚 Torah Learning Milestones</a></div>
+    <div class="gift-card"><a href="/jewish-gift-store/gifts/upsherin.html">✂️ Upsherin (First Haircut)</a></div>
+    <div class="gift-card"><a href="/jewish-gift-store/gifts/final-thoughts.html">🎁 Final Thoughts</a></div>
+  </div>
 
-  <main class="container">
-    <div class="card"><div class="icon">🇮🇱</div><a href="/jewish-gift-store/gifts/aliyah.html">Aliyah (Moving to Israel)</a><p class="desc">Gifts for those making the sacred move to Israel.</p></div>
-    <div class="card"><div class="icon">🎉</div><a href="/jewish-gift-store/gifts/bar-mitzvah.html">Bar/Bat Mitzvah</a><p class="desc">Celebrate this powerful coming-of-age milestone.</p></div>
-    <div class="card"><div class="icon">🍼</div><a href="/jewish-gift-store/gifts/baby.html">Birth & Baby Naming</a><p class="desc">Welcome a new soul with Jewish baby gifts.</p></div>
-    <div class="card"><div class="icon">✡️</div><a href="/jewish-gift-store/gifts/conversion.html">Conversion to Judaism</a><p class="desc">Meaningful gifts for new members of the tribe.</p></div>
-    <div class="card"><div class="icon">💍</div><a href="/jewish-gift-store/gifts/wedding.html">Weddings & Engagements</a><p class="desc">Kiddush cups, challah boards, Judaica & more.</p></div>
-    <div class="card"><div class="icon">🎓</div><a href="/jewish-gift-store/gifts/graduation.html">Graduations</a><p class="desc">Elegant pens, books, tech for the next chapter.</p></div>
-    <div class="card"><div class="icon">🕯</div><a href="/jewish-gift-store/gifts/holidays.html">Jewish Holidays & Shabbat</a><p class="desc">Celebrate the cycle of the Jewish year in style.</p></div>
-    <div class="card"><div class="icon">🏡</div><a href="/jewish-gift-store/gifts/housewarming.html">Housewarming</a><p class="desc">Bless a new home with mezuzahs and joy.</p></div>
-    <div class="card"><div class="icon">📖</div><a href="/jewish-gift-store/gifts/kids-learning.html">Kids’ First Siddur / School</a><p class="desc">Encourage Torah learning from the very start.</p></div>
-    <div class="card"><div class="icon">🕯</div><a href="/jewish-gift-store/gifts/memorial.html">Memorials & Yahrzeits</a><p class="desc">Honor loved ones with light and remembrance.</p></div>
-    <div class="card"><div class="icon">👵</div><a href="/jewish-gift-store/gifts/milestone.html">Milestone Birthdays</a><p class="desc">Celebrate long life and enduring joy.</p></div>
-    <div class="card"><div class="icon">🏛</div><a href="/jewish-gift-store/gifts/ordination.html">Rabbinic Ordination</a><p class="desc">Torah sets and tech for the newly ordained.</p></div>
-    <div class="card"><div class="icon">👶</div><a href="/jewish-gift-store/gifts/pidyon.html">Pidyon HaBen</a><p class="desc">Silver Judaica and keepsakes for this rare mitzvah.</p></div>
-    <div class="card"><div class="icon">📚</div><a href="/jewish-gift-store/gifts/torah-learning.html">Torah Learning Milestones</a><p class="desc">Honor siyum and daily study achievements.</p></div>
-    <div class="card"><div class="icon">✂️</div><a href="/jewish-gift-store/gifts/upsherin.html">Upsherin (First Haircut)</a><p class="desc">Celebrate his first haircut and mitzvah moment.</p></div>
-    <div class="card"><div class="icon">🎁</div><a href="/jewish-gift-store/gifts/final-thoughts.html">Final Thoughts</a><p class="desc">Browse all categories and gifting inspiration.</p></div>
-  </main>
+  <div class="cta-banner">
+    ✨ Looking for the perfect Jewish gift?
+    <a href="/jewish-gift-store/contact.html">Contact us</a> — we’re happy to help!
+  </div>
+</main>
 
-  <footer>
-    &copy; 2025 Jewish Gift Store. All rights reserved.
-  </footer>
+<footer>
+  &copy; 2025 Jewish Gift Store. All rights reserved.
+</footer>
+
 </body>
 </html>
