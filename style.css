@@ -130,3 +130,34 @@ footer {
   color: #999;
   padding-bottom: 2rem;
 }
+
+.site-header {
+  background-color: #f0eefc;
+  border-bottom: 1px solid #ddd;
+  padding: 0.8rem 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #4b2e83;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #1a73e8;
+}
+
